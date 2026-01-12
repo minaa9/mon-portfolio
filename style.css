@@ -226,6 +226,10 @@ header
   font-weight: 400;
   line-height: 1.6;
 }
+<div class="skills-grid">
+    <div class="skill-box"><h4>Data Analysis</h4></div>
+    <div class="skill-box"><h4>Machine Learning</h4></div>
+</div>
 /* Hover cartes compétences */
 .skill-card {
   transition: all 0.3s ease;
