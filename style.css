@@ -14,6 +14,9 @@
   --text-light: #f0f6fc;
   --text-gray: #8b949e;
   --accent: #30363d;
+ --bg-light: #fdfdfd;
+  --text-main: #1a1a1b;
+  --gold: #c5a059;
 }
 /* ===== STYLES GLOBAUX - TYPOGRAPHIE (thème échecs) ===== */ 
 body
@@ -29,6 +32,11 @@ body
   background-size: 100px 100px;
   color: var(--text-light);
   line-height: 1.6;
+ {
+  background-color: var(--bg-light);
+  color: var(--text-main);
+  font-family: sans-serif;
+}
 }
 
 /* ===== TYPOGRAPHIE DES TITRES ===== */
