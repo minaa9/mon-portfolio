@@ -62,10 +62,13 @@ header
   backdrop-filter: blur(10px);
   background: rgba(10, 12, 16, 0.8);
 }
-nav { display: flex;
-  justify-content: space-between;
-  align-items: center;
-} 
+ <nav class="navbar">
+    <div class="logo">AMINA<span>IMADJENE</span></div>
+    <ul class="nav-links">
+        <li><a href="#about">L'Ouverture</a></li>
+        <li><a href="#projects">Grands Maîtres</a></li>
+    </ul>
+</nav>
 .logo 
 {
   font-size: 1.5rem; 
