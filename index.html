@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Amina Imadjene</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300;1,700&family=DM+Mono:wght@300;400&family=Bebas+Neue&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
 
 </head>
 <body>
@@ -19,7 +19,16 @@
 </div>
 <div id="hud-bot">
   <div id="msgBox">Clique sur une pièce blanche pour commencer</div>
-  <div class="hlbl">♟ BLANC JOUE ET MAT EN 1 — Indice : la Tour !</div>
+  <div class="hlbl">♟ BLANC JOUE ET MAT EN 1</div>
+
+  <div id="howto">
+    <div class="howto-step"><span class="howto-num">1</span> Clique sur la <strong>Tour blanche ♖</strong></div>
+    <div class="howto-sep">→</div>
+    <div class="howto-step"><span class="howto-num">2</span> Clique la case <strong>surlignée</strong> tout en haut</div>
+    <div class="howto-sep">→</div>
+    <div class="howto-step"><span class="howto-num">3</span> <strong>Mat !</strong> Le portfolio s'ouvre ✓</div>
+  </div>
+
   <button id="btnR" onclick="reset()">↺ Recommencer</button>
 </div>
 <div class="page" id="p1">
@@ -85,6 +94,6 @@
   </div>
 </div>
 <div id="prog"><div class="dot" id="d0"></div><div class="dot" id="d1"></div><div class="dot" id="d2"></div><div class="dot" id="d3"></div></div>
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
