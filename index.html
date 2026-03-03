@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
@@ -97,10 +97,13 @@ html,body{width:100%;height:100%;overflow:hidden;background:#0a0502;font-family:
 </style>
 </head>
 <body>
+
 <div id="cur"></div>
 <div id="flash"></div>
 <div id="world"><div id="boardFrame"></div><div id="board"></div></div>
 <div id="vig"></div>
+
+<!-- HUD -->
 <div id="hud-top">
   <div class="hname">AMINA IMADJENE</div>
   <div class="htag">Résous le puzzle — découvre le portfolio</div>
@@ -108,7 +111,6 @@ html,body{width:100%;height:100%;overflow:hidden;background:#0a0502;font-family:
 <div id="hud-bot">
   <div id="msgBox">Clique sur une pièce blanche pour commencer</div>
   <div class="hlbl">♟ BLANC JOUE ET MAT EN 1</div>
-
   <div id="howto">
     <div class="howto-step"><span class="howto-num">1</span> Clique sur la <strong>Tour blanche ♖</strong></div>
     <div class="howto-sep">→</div>
@@ -116,21 +118,33 @@ html,body{width:100%;height:100%;overflow:hidden;background:#0a0502;font-family:
     <div class="howto-sep">→</div>
     <div class="howto-step"><span class="howto-num">3</span> <strong>Mat !</strong> Le portfolio s'ouvre ✓</div>
   </div>
-
   <button id="btnR" onclick="reset()">↺ Recommencer</button>
 </div>
+
+<!-- PAGE 1 : À propos -->
 <div class="page" id="p1">
   <div class="glass">
-    <div class="pnav"><span class="pstep">01 / A PROPOS</span><button class="pback" onclick="backGame()">← Revenir au jeu</button></div>
+    <div class="pnav">
+      <span class="pstep">01 / À PROPOS</span>
+      <button class="pback" onclick="backGame()">← Revenir au jeu</button>
+    </div>
     <div class="ey">Bienvenue dans ma tête</div>
     <h1 class="big">Je transforme les données<br><em>en stratégies.</em></h1>
-    <p class="bt">Je suis  <strong>Amina Imadjene</strong>, étudiante en 1ere année Data &amp; IA à <strong>HETIC</strong>. Comme aux échecs je planifie mes actions en évaluant plusieurs coups d'avance pour sécuriser mes objectifs. C'est cette logique que j'applique à la data,  et aux projets que je construis.<br><br>Passionnée par l'intersection entre <strong>mathématiques, créativite et technologie</strong> Ma force ? Rendre intelligible l'invisible en transformant des masses de données complexes en récits actionnables.</p>
-    <div class="pft"><button class="bgo bghost" onclick="backGame()">← Rejouer</button><button class="bgo" onclick="go(2)">Mes compétences →</button></div>
+    <p class="bt">Je suis <strong>Amina Imadjene</strong>, étudiante en 1ère année Data &amp; IA à <strong>HETIC</strong>. Comme aux échecs je planifie mes actions en évaluant plusieurs coups d'avance pour sécuriser mes objectifs. C'est cette logique que j'applique à la data et aux projets que je construis.<br><br>Passionnée par l'intersection entre <strong>mathématiques, créativité et technologie</strong>. Ma force ? Rendre intelligible l'invisible en transformant des masses de données complexes en récits actionnables.</p>
+    <div class="pft">
+      <button class="bgo bghost" onclick="backGame()">← Rejouer</button>
+      <button class="bgo" onclick="go(2)">Mes compétences →</button>
+    </div>
   </div>
 </div>
+
+<!-- PAGE 2 : Compétences -->
 <div class="page" id="p2">
   <div class="glass">
-    <div class="pnav"><span class="pstep">02 / COMPETENCES</span><button class="pback" onclick="go(1)">← Retour</button></div>
+    <div class="pnav">
+      <span class="pstep">02 / COMPÉTENCES</span>
+      <button class="pback" onclick="go(1)">← Retour</button>
+    </div>
     <div class="ey">Mon arsenal</div>
     <h2 class="big">Mes <em>pièces</em> sur l'échiquier</h2>
     <div class="sgrid">
@@ -138,41 +152,84 @@ html,body{width:100%;height:100%;overflow:hidden;background:#0a0502;font-family:
       <div class="sbox"><div class="sico">📊</div><div class="snm">Visualisation</div><div class="stg">Matplotlib · Seaborn · D3.js</div></div>
       <div class="sbox"><div class="sico">🎮</div><div class="snm">Dev Web</div><div class="stg">JavaScript · HTML/CSS · React</div></div>
       <div class="sbox"><div class="sico">♟</div><div class="snm">Algorithmique</div><div class="stg">Maths · Stats · Logique</div></div>
-      <div class="sbox"><div class="sico">🔬</div><div class="snm">Recherche IA</div><div class="stg">LLMs · Manus </div></div>
+      <div class="sbox"><div class="sico">🔬</div><div class="snm">Recherche IA</div><div class="stg">LLMs · Manus</div></div>
     </div>
-    <div class="pft"><button class="bgo bghost" onclick="go(1)">← Retour</button><button class="bgo" onclick="go(3)">Mes projets →</button></div>
+    <div class="pft">
+      <button class="bgo bghost" onclick="go(1)">← Retour</button>
+      <button class="bgo" onclick="go(3)">Mes projets →</button>
+    </div>
   </div>
 </div>
+
+<!-- PAGE 3 : Projets -->
 <div class="page" id="p3">
   <div class="glass" style="max-width:960px">
-    <div class="pnav"><span class="pstep">03 / PROJETS</span><button class="pback" onclick="go(2)">← Retour</button></div>
-    <div class="ey">Pièces Maitresses</div>
+    <div class="pnav">
+      <span class="pstep">03 / PROJETS</span>
+      <button class="pback" onclick="go(2)">← Retour</button>
+    </div>
+    <div class="ey">Pièces Maîtresses</div>
     <h2 class="big">Ce que j'ai <em>construit</em></h2>
-    
-    <div class="pgrid"> <div class="pc"><div class="pcat">Vibe-Coding · Data Cleaning · Automation</div> <div class="ptit">Analyse & Nettoyage</div> <div class="pdsc">Solution  permettant d’importer, analyser et nettoyer automatiquement  des fichiers de données pour améliorer leurs qualités et leurs exploitabilités. </div>
-  <a href="https://minianalys-xgkwvnyp.manus.space" class="plnk">Click ici →</a>
-</div>
-      <div class="pc"><div class="pcat">Python · Data Analysis · Pandas</div><div class="ptit">Dashboard Alternance Reading Index</div><div class="pdsc">Tableau de bord d’analyse pour évaluer le niveau de préparation à l’alternance. Nettoyage des données, scoring des profils et visualisation des axes d’amélioration..</div><a href="https://github.com/minaa9/PROJET-DATA-.git" class="plnk">Click ici →</a></div>
-      <div class="pc"><div class="pcat">JavaScript · Gamification</div><div class="ptit">Foot Locker — Catch &amp; Click</div><div class="pdsc"><span class="live"></span>En cours — Jeu instant gagnant, attrape des articles Foot Locker en mouvement. Gestion des probabilites de gain.</div>
+
+    <div class="pgrid">
+
+      <div class="pc">
+        <div class="pcat">Vibe-Coding · Data Cleaning · Automation</div>
+        <div class="ptit">Analyse &amp; Nettoyage</div>
+        <div class="pdsc">Solution permettant d'importer, analyser et nettoyer automatiquement des fichiers de données pour améliorer leur qualité et leur exploitabilité.</div>
+        <a href="https://minianalys-xgkwvnyp.manus.space" class="plnk" target="_blank">Click ici →</a>
       </div>
-      <div class="pc pwide"><div style="flex:1"><div class="pcat">HTML · CSS · JS · Design</div><div class="ptit">Ce portfolio — Echec et mat a l'ennui</div><div class="pdsc">Le portfolio est lui-meme un projet. Un puzzle d'echecs jouable comme porte d'entree, des pages deverrouillees par la victoire.</div></div><div class="pdeco">♛</div></div>
-    </div>
-      <div class="pc"> <div class="pcat">IA · Finance · Automation</div> <div class="ptit">Assistant Financier IA</div><div class="pdsc"> Assistant intelligent capable d’analyser des données financières,générer des insights et automatiser certaines tâches de gestion budgétaire.</div>
+
+      <div class="pc">
+        <div class="pcat">Python · Data Analysis · Pandas</div>
+        <div class="ptit">Dashboard Alternance Reading Index</div>
+        <div class="pdsc">Tableau de bord d'analyse pour évaluer le niveau de préparation à l'alternance. Nettoyage des données, scoring des profils et visualisation des axes d'amélioration.</div>
+        <a href="https://github.com/minaa9/PROJET-DATA-.git" class="plnk" target="_blank">Click ici →</a>
       </div>
-  <a href="https://finassistant-jdvujs93.manus.space" class="plnk">Click ici →</a></div>
-</div>
+
+      <div class="pc">
+        <div class="pcat">JavaScript · Gamification</div>
+        <div class="ptit">Foot Locker — Catch &amp; Click</div>
+        <div class="pdsc"><span class="live"></span>En cours — Jeu instant gagnant, attrape des articles Foot Locker en mouvement. Gestion des probabilités de gain.</div>
+      </div>
+
+      <div class="pc">
+        <div class="pcat">IA · Finance · Automation</div>
+        <div class="ptit">Assistant Financier IA</div>
+        <div class="pdsc">Assistant intelligent capable d'analyser des données financières, générer des insights et automatiser certaines tâches de gestion budgétaire.</div>
+        <a href="https://finassistant-jdvujs93.manus.space" class="plnk" target="_blank">Click ici →</a>
+      </div>
+
+      <div class="pc pwide">
+        <div style="flex:1">
+          <div class="pcat">HTML · CSS · JS · Design</div>
+          <div class="ptit">Ce portfolio — Échec et mat à l'ennui</div>
+          <div class="pdsc">Le portfolio est lui-même un projet. Un puzzle d'échecs jouable comme porte d'entrée, des pages déverrouillées par la victoire.</div>
+        </div>
+        <div class="pdeco">♛</div>
+      </div>
+
     </div>
-    <div class="pft"><button class="bgo bghost" onclick="go(2)">← Retour</button><button class="bgo" onclick="go(4)">Me contacter →</button></div>
+
+    <div class="pft">
+      <button class="bgo bghost" onclick="go(2)">← Retour</button>
+      <button class="bgo" onclick="go(4)">Me contacter →</button>
+    </div>
   </div>
 </div>
+
+<!-- PAGE 4 : Contact -->
 <div class="page" id="p4">
   <div class="glass">
-    <div class="pnav"><span class="pstep">04 / CONTACT</span><button class="pback" onclick="go(3)">← Retour</button></div>
+    <div class="pnav">
+      <span class="pstep">04 / CONTACT</span>
+      <button class="pback" onclick="go(3)">← Retour</button>
+    </div>
     <div class="ey">Prochain coup</div>
     <h2 class="big">On joue <em>ensemble ?</em></h2>
     <div class="ccols">
       <div>
-        <p class="bt">Ouverte aux stages et aux alternances, collaborations et projets ambitieux. Si tu cherches quelqu'un qui pense en stratége et code en créative — parlons.</p>
+        <p class="bt">Ouverte aux stages et aux alternances, collaborations et projets ambitieux. Si tu cherches quelqu'un qui pense en stratège et code en créative — parlons.</p>
         <blockquote class="cq">"Chaque donnée est une pièce sur l'échiquier. Je les fais gagner."</blockquote>
         <div class="slks">
           <a href="mailto:amina@example.com" class="slk">✉ Email</a>
@@ -180,18 +237,26 @@ html,body{width:100%;height:100%;overflow:hidden;background:#0a0502;font-family:
           <a href="https://github.com/minaa9" class="slk" target="_blank">⌥ GitHub — minaa9</a>
         </div>
       </div>
-      <div class="pft"><button class="bgo bghost" onclick="go(1)">← Retour</button><button class="bgo" onclick="go(3)">Mes projets →</button></div>
       <div>
-      <form onsubmit="sendForm(event)">
-        <div class="flbl">Nom</div><input class="fi" type="text" placeholder="Ton nom" required>
-        <div class="flbl">Email</div><input class="fi" type="email" placeholder="ton@email.com" required>
-        <div class="flbl">Message</div><textarea class="fa" placeholder="Dis-moi tout..." required></textarea>
-        <button type="submit" class="bgo" id="sbtn">Envoyer →</button>
-      </form>
+        <form onsubmit="sendForm(event)">
+          <div class="flbl">Nom</div><input class="fi" type="text" placeholder="Ton nom" required>
+          <div class="flbl">Email</div><input class="fi" type="email" placeholder="ton@email.com" required>
+          <div class="flbl">Message</div><textarea class="fa" placeholder="Dis-moi tout..." required></textarea>
+          <button type="submit" class="bgo" id="sbtn">Envoyer →</button>
+        </form>
+      </div>
     </div>
   </div>
 </div>
-<div id="prog"><div class="dot" id="d0"></div><div class="dot" id="d1"></div><div class="dot" id="d2"></div><div class="dot" id="d3"></div></div>
+
+<!-- Progression -->
+<div id="prog">
+  <div class="dot" id="d0"></div>
+  <div class="dot" id="d1"></div>
+  <div class="dot" id="d2"></div>
+  <div class="dot" id="d3"></div>
+</div>
+
 <script>
 var cur = document.getElementById('cur');
 document.addEventListener('mousemove', function(e) {
@@ -203,7 +268,6 @@ document.querySelectorAll('a,button').forEach(function(el) {
   el.addEventListener('mouseleave', function() { cur.classList.remove('big'); });
 });
 
-// Construire l'echiquier
 var boardEl = document.getElementById('board');
 var sqEls = [];
 for (var r = 0; r < 8; r++) {
@@ -277,9 +341,7 @@ function getMoves(r, c) {
     var tr = r + dr, tc = c + dc;
     while (push(tr, tc)) { tr += dr; tc += dc; }
   }
-  if (p.type === 'Q') { [[1,0],[-1,0],[0,1],[0,-1],[1,1],[1,-1],[-1,1],[-1,-1]].forEach(function(d){slide(d[0],d[1]);}); }
-  if (p.type === 'R') { [[1,0],[-1,0],[0,1],[0,-1]].forEach(function(d){slide(d[0],d[1]);}); }
-  if (p.type === 'B') { [[1,1],[1,-1],[-1,1],[-1,-1]].forEach(function(d){slide(d[0],d[1]);}); }
+  if (p.type === 'R') { [[1,0],[-1,0],[0,1],[0,-1]].forEach(function(d){ slide(d[0],d[1]); }); }
   if (p.type === 'K') { for(var dr=-1;dr<=1;dr++) for(var dc=-1;dc<=1;dc++) { if(dr||dc) push(r+dr,c+dc); } }
   return moves;
 }
@@ -291,16 +353,14 @@ function onPiece(r, c) {
   if (p.color === 'black' && sel) {
     var moves = getMoves(sel.r, sel.c);
     for (var i = 0; i < moves.length; i++) {
-      if (moves[i].r === r && moves[i].c === c && moves[i].cap) {
-        doMove(sel.r, sel.c, r, c); return;
-      }
+      if (moves[i].r === r && moves[i].c === c && moves[i].cap) { doMove(sel.r, sel.c, r, c); return; }
     }
-    setMsg('Cette piece ne peut pas aller la'); return;
+    setMsg('Cette pièce ne peut pas aller là'); return;
   }
   if (p.color === 'black') { setMsg('Joue les blancs !'); return; }
   if (sel && sel.r === r && sel.c === c) {
     p.el.classList.remove('sel'); clearHL(); sel = null;
-    setMsg('Clique sur une piece blanche pour commencer'); return;
+    setMsg('Clique sur une pièce blanche pour commencer'); return;
   }
   if (sel) { var old = pmap[K(sel.r, sel.c)]; if(old) old.el.classList.remove('sel'); clearHL(); }
   sel = { r: r, c: c };
@@ -310,7 +370,7 @@ function onPiece(r, c) {
     sqEls[mv[j].r][mv[j].c].classList.add(mv[j].cap ? 'cap' : 'hint');
     hilited.push({ r: mv[j].r, c: mv[j].c });
   }
-  setMsg('Clique sur une case doree pour jouer');
+  setMsg('Clique sur une case dorée pour jouer');
 }
 
 function onCell(r, c) {
@@ -323,8 +383,6 @@ function onCell(r, c) {
 
 function doMove(fr, fc, tr, tc) {
   var moving = pmap[K(fr, fc)];
-  // Le seul bon coup : Dame blanche (Q) de r3,c3 vers r0,c3
-  // Puzzle ultra simple : Tour blanche de h2 va en h8 — mat !
   var isWin = (moving.type === 'R' && moving.color === 'white' && fr === 6 && fc === 7 && tr === 0 && tc === 7);
   var cap = pmap[K(tr, tc)];
   if (cap) { cap.el.remove(); delete pmap[K(tr, tc)]; }
@@ -336,14 +394,14 @@ function doMove(fr, fc, tr, tc) {
   put(moving.type, moving.color, tr, tc);
   if (isWin) {
     solved = true;
-    setMsg('QD8# — ECHEC ET MAT ! Le portfolio s\'ouvre...');
+    setMsg('Rh8# — ÉCHEC ET MAT ! Le portfolio s\'ouvre...');
     setTimeout(function() {
       document.getElementById('flash').classList.add('go');
       setTimeout(function() { document.getElementById('flash').classList.remove('go'); }, 600);
       setTimeout(function() { openPage(1); }, 400);
     }, 600);
   } else {
-    setMsg('Pas le bon coup... La Dame doit aller en d8 !');
+    setMsg('Pas le bon coup... la Tour doit aller tout en haut !');
     setTimeout(reset, 1600);
   }
 }
@@ -389,20 +447,17 @@ function updateDots() {
 function sendForm(e) {
   e.preventDefault();
   var btn = document.getElementById('sbtn');
-  btn.textContent = 'Envoye !';
+  btn.textContent = 'Envoyé !';
   btn.style.background = '#4a9a6a';
   setTimeout(function() { btn.textContent = 'Envoyer →'; btn.style.background = ''; e.target.reset(); }, 3000);
 }
 
 function reset() {
   clearHL(); sel = null; solved = false; clearPieces();
-  // Blanc : Roi e1, Tour h2
-  // Noir  : Roi h8 (coince dans le coin)
-  // Solution : Tour de h2 → h8 (mat !)
-  put('K','white',7,4);
-  put('R','white',6,7);
-  put('K','black',0,7);
-  setMsg('Clique sur une piece blanche pour commencer');
+  put('K', 'white', 7, 4);
+  put('R', 'white', 6, 7);
+  put('K', 'black', 0, 7);
+  setMsg('Clique sur une pièce blanche pour commencer');
 }
 
 reset();
